@@ -1,0 +1,145 @@
+/* Estilo geral */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}*
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url(./assets/fundo.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem */
+    background-position: center center;
+    /* Centraliza a imagem */
+    background-attachment: fixed;
+    /* Faz a imagem ficar fixa enquanto rola */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
+    position: relative; /* Para garantir que a div fique sobre a imagem */
+    z-index: 1; /* Garante que a div ficará na frente da imagem */
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+button {
+    font-size: 0;
+    border: none;
+    background: none;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Animações suaves */
+}
+
+button img {
+    width: 120px;
+    /* Ajusta o tamanho da imagem */
+    height: 120px;
+    border-radius: 10px;
+    /* Arredonda as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeitos ao passar o mouse */
+button:hover {
+    transform: translateY(-5px);
+    /* Eleva o botão */
+}
+
+button:hover img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra mais forte */
+    transform: scale(1.1);
+    /* Aumenta o tamanho */
+}
+
+/* Animação ao clicar */
+button:active img {
+    transform: scale(0.95);
+    /* Encolhe levemente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra reduzida */
+}
+
+p{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.your-score span {
+    color: rgb(28, 28, 149);
+    font-size: 25px;
+
+}
+
+.machine-score span{
+    color: rgb(179, 33, 33);
+    font-size: 25px;
+}
+
+.draw {
+    position: relative; /* Faz a .draw ser o ponto de referência para a animação */
+}
+
+.animation {
+    position: fixed; /* Fixa o aviso em relação à janela */
+    top: 50%; /* Posiciona verticalmente no meio */
+    left: 44%; /* Posiciona horizontalmente no meio */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 9999;
+    animation: fadeInOut 1.5s ease-in-out forwards;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}

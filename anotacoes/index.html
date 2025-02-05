@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> 0 </h1>
+    <button onclick="stop()"> Parar </button>
+    <button onclick="start()"> Comerçar </button>
+    <br></br>
+    <br></br>
+    <input placeholder="Digite o nome do contato">
+    <br></br>
+    <p></p>
+    <button onclick="search()">Procurar Contato</button>
+</body>
+<script> 
+    let p = document.querySelector("p")
+    let input = document.querySelector("input")
+
+    const contacts = [
+        { name: 'Camila', number: '(42) 93543435435', age: '25years old.' },
+        { name: 'Maria', number: '(42) 93543435435', age: '25years old.' },
+        { name: 'Pedro', number: '(42) meia meia meia mole meia dura', age: '09years old.' },
+        { name: 'Moacir', number: '(42) 93543435435', age: '25years old.' },
+    ]
+/*let contactFound = false
+    contacts.forEach(contact => {
+        if (input.value.toLocaleLowerCase() === contact.name.toLocaleLowerCase()) {
+                p.innerHTML = `contato encontrado: Nome ${contact.name} Tel: ${contact.number} Idade: ${contact.age}`
+            contactFound = true;
+            }
+        });
+if (!contactFound) {
+    p.innerHTML = "Contato não encontrato";
+}
+*/
+function search() {
+        let contactFound = false;
+        const searchValue = input.value.toLowerCase();
+
+        contacts.forEach(contact => {
+            if (searchValue === contact.name.toLowerCase()) {
+                p.innerHTML = `Contato encontrado: Nome ${contact.name}, Tel: ${contact.number}, Idade: ${contact.age}`;
+                contactFound = true;
+            }
+        });
+
+        if (!contactFound) {
+            p.innerHTML = "Contato não encontrado";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+function search() {
+    let found = false;
+    let i = 0;
+   while (i< contacts.length) {
+    const contact= contacts[i];
+    if (input.value.toLocaleLowerCase() === contact.name.toLocaleLowerCase()) {
+                p.innerHTML = `contato encontrado: Nome: ${contact.name} Tel: ${contact.number} Idade: ${contact.age}`;
+                found=true;
+                break;
+        }
+          i++;
+    }
+    if(!found) {
+        p.innerHTML = "contato nao encontrado"   
+}
+}/*
+
+
+
+/* laço FOROF/*
+    function search() {
+    for (const contact of contacts) {
+    
+        if (input.value.toLocaleLowerCase() === contact.name.toLocaleLowerCase()) {
+                p.innerHTML = `contato encontrado: Nome: ${contact.name} Tel: ${contact.number} Idade: ${contact.age}`;
+                break
+        }
+         else {
+                p.innerHTML = "contato nao encontrado"
+            }
+        }}
+
+    /*   laço FOR
+    function search() {
+        for (let i = 0; i < contacts.length; i++) {
+            if (input.value.toLocaleLowerCase() === contacts[i].name.toLocaleLowerCase()) {
+                p.innerHTML = `contato encontrado: Nome ${contacts[i].name} Tel: ${contacts[i].number} Idade: ${contacts[i].age}`
+                break
+            }
+            else {
+                p.innerHTML = "contato nao encontrado"
+            }
+        }
+    }
+
+
+    input.addEventListener("keydown", function (pressenter) {
+        if (pressenter.key === "Enter") {
+            search(); // Chama a função de busca
+        }
+    });
+*/
+
+
+    /*let number = 0
+    let cron
+    let h1 = document.querySelector("h1")
+
+    function start() {
+        cron = setInterval(function() {
+            number++
+            h1.innerHTML = number
+        }, 800);
+    }
+
+    function stop() {
+        clearInterval(cron)
+
+
+    }
+
+    /* setInterval(() => {
+         console.log(number++)
+     }, 4000);*/
+
+</script>
+
+</html>

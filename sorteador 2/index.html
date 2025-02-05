@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <img class="devsorteio" src="./devsorteio.png" alt="Logo Devsorteio">
+    </div>
+
+    <div class="container">
+        <h1>Sortear um Número</h1>
+        <div class="inputs">
+            <input type="number" id="min" placeholder="Mínimo: Ex: 1" class="input-min">
+            <input type="number" id="max" placeholder="Máximo: Ex: 100" class="input-max">
+        </div>
+        <button class="btn-sortear" onclick="generateNumber()">Sortear</button>
+        <p id="resultado" class="resultado"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

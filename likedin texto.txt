@@ -1,0 +1,9 @@
+Olá! Sou Moacir Guilherme Tabisz e estou em transição de carreira da área Contábil para Programação e Desenvolvimento Web. Com 40 anos e 16 anos de experiência em setores como Fiscal, Financiamento e Atendimento ao Público, desenvolvi uma visão analítica, organização e habilidade para resolver problemas.
+Atualmente, sou estudante de Programação e Desenvolvimento Web no Devclub, onde estou desenvolvendo habilidades em HTML, CSS, JavaScript, React e Node, além de aprimorar meu inglês em nível intermediário para expandir minhas oportunidades profissionais. 
+Busco uma primeira oportunidade para aplicar meus conhecimentos em projetos práticos e contribuir de forma significativa para uma equipe de tecnologia. Sou um profissional comprometido e adaptável, sempre em busca de evolução. Se você procura alguém dedicado para integrar sua equipe, ficarei feliz em conversar!
+Para contato direto: 📞 WhatsApp: (42) 98869-4890
+📧 Email: moagt@yahoo.com.br
+
+
+(programador AND desenvolvedor AND "júnior" AND Javascript) NOT (JAVA OR "Golang" PHP OU C# OR Pleno OR PL OR Sênior OR
+Low OR Python OR Bubble)

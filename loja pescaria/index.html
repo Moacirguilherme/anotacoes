@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="input-first" placeholder="Digite o nome da conta">
+  <br>
+  <br>
+  <button class="first-button"> Procurar Contato </button>
+  <p>Nome: </p>
+</body>
+<script>
+
+  const users = [
+    { name: 'Moacir', age: '40', number: '(42) 94358-3554' },
+    { name: 'Perdro', age: '9', number: '(42) 9135-243535' },
+    { name: 'Camila', age: '36', number: '(42) 413515-351' },
+    { name: 'Pompom', age: '9', number: '(42) 3135-254554' },
+    { name: 'Iara', age: '0,6', number: '(42) 3135-357854' },
+  ]
+  const input = document.getElementById("input-first")
+  const button = document.getElementsByClassName("first-button")[0]
+  const p = document.querySelector("p")
+
+  function clicar() {
+    let found = false
+    users.forEach((user) => {
+      if (input.value.toLowerCase() === user.name.toLowerCase()) {
+        p.innerHTML = `Contato encontrado Nome:${user.name} Tel:${user.number}`
+        found=true
+      }
+    })
+      if (!found) {
+    p.innerHTML = "Contato não encontrado, tente novamente.";
+  }
+    };
+
+      button.addEventListener("click", clicar)
+      input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          clicar();
+        }
+      });
+    
+
+
+
+
+
+
+
+
+      /*for (let index = 0; index < users.length; index++) {
+   
+    if (input.value.toLowerCase() === users[index].name.toLowerCase()) {
+      p.innerHTML = `Contato encontrado Nome:${users[index].name} Tel:${users[index].number}`
+      break
+    }
+else{
+p.innerHTML = "contato nao econtrato, try again."
+}
+  }
+}*/
+      /*
+        
+        for (const user of users) {
+          console.log(users)
+           
+            if (input.value.toLowerCase() === user.name.toLowerCase()) {
+              p.innerHTML = `Contato encontrado Nome:${user.name} Tel:${user.number}`
+              break
+            }
+      else{
+        p.innerHTML = "contato nao econtrato, try again."
+      }
+          }
+        }*/
+    
+</script>
+
+</html>
