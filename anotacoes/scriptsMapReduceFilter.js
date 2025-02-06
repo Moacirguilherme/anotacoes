@@ -107,14 +107,16 @@ const companias = [
     { name: 'Apple', marketValue: 845, CEO: 'Tim Cook', foundedOn: 1976 },
 ]
 
-const newCompanies = companias.map(company => {
-return {
-    name: company.name,
-    marketValue: (company.marketValue * 1.1).toFixed(0),
-    CEO: company.CEO,
-    foundedOn: company.foundedOn
-    
-    }
-})
-console.log(newCompanies)
-//exercios mapfilterresult
+const newCompanies = companias
+.map(company => {
+    company.marketValue = (company.marketValue * 1.1)
+    return company
+}).filter(company => {
+    return company.foundedOn < 1990
+}).reduce((acc, company) => {
+    return acc + company.marketValue
+},0)
+console.log(newCompanies.toFixed(1))
+//erqwqtertfasdfasf
+
+//fdsafadsfadsfasf
