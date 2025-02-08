@@ -160,4 +160,4 @@ const produtos = [
   }))
   
   console.log(nomesMaiusculos); 
-    
+    dfasdfdafa
