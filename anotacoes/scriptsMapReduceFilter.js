@@ -96,7 +96,7 @@ const totalCarrinho = carrinho.reduce((acumulador , valoratual) => {
         return acumulador + ( valoratual.pricePerKg * valoratual.kg) 
 },0)
 console.log('Total: R$' + totalCarrinho.toFixed(2))*/
-
+/*
 
 const companias = [
     { name: 'Sansung', marketValue: 50, CEO: 'Kim Hyun Suk', foundedOn: 1938 },
@@ -106,6 +106,19 @@ const companias = [
     { name: 'Spotify', marketValue: 30, CEO: 'Daniel Ek', foundedOn: 2006 },
     { name: 'Apple', marketValue: 845, CEO: 'Tim Cook', foundedOn: 1976 },
 ]
+
+/*
+const addvaluecompany = companias
+.map(company => {
+  company.marketValue = (company.marketValue * 1.15)
+    return company
+}).filter(company => {
+    return company.foundedOn < 1990
+}).reduce((acc, company) => {
+return acc + company.marketValue
+},0)
+console.log(addvaluecompany.toFixed(2))
+
 
 const newCompanies = companias
 .map(company => {
@@ -117,6 +130,34 @@ const newCompanies = companias
     return acc + company.marketValue
 },0)
 console.log(newCompanies.toFixed(1))
-//erqwqtertfasdfasf
 
-//fdsafadsfadsfasf TESTES COMMIT
+const newCompanies = companias
+    .map(company => {
+        company.marketValue = (company.marketValue * 0.9)
+        return company
+    }).filter(company => {
+        return company.foundedOn > 1980
+    }).reduce((acc, company) => {
+        return acc + company.marketValue
+    }, 0)
+console.log(newCompanies)*/
+
+
+
+
+
+
+const produtos = [
+    { id: 1, nome: "Notebook", preco: 3500 },
+    { id: 2, nome: "Smartphone", preco: 2000 },
+    { id: 3, nome: "Tablet", preco: 1500 }
+  ];
+   
+  const nomesMaiusculos = produtos.map(produt => ({
+   ...produt,
+    nome: produt.nome.toUpperCase(),
+    preco: (produt.preco*0.9)
+  }))
+  
+  console.log(nomesMaiusculos); 
+    
