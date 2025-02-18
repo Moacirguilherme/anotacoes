@@ -140,10 +140,7 @@ const newCompanies = companias
     }).reduce((acc, company) => {
         return acc + company.marketValue
     }, 0)
-console.log(newCompanies)*/
-
-
-
+console.log(newCompanies)
 
 
 
@@ -159,5 +156,141 @@ const produtos = [
     preco: (produt.preco*0.9)
   }))
   
-  console.log(nomesMaiusculos); 
-    dfasdfdafafdsfads
+  console.log(nomesMaiusculos);
+   
+  const produtos = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 60 },
+    { nome: "Tênis", preco: 120 }
+  ]
+
+  const changeProduts = produtos.map(produt =>{
+    return{
+    nome: produt.nome,
+    preco: (produt.preco * 1.1)
+    }
+  })
+  console.log(changeProduts)
+  
+  const produtos = [
+    { nome: "Notebook", preco: 5000 },
+    { nome: "Smartphone", preco: 3000 },
+    { nome: "Tablet", preco: 1500 }
+];
+
+const newProdutsDescount = produtos.map(produt =>{
+return {
+    nome: produt.nome,
+    preco: (produt.preco * 0.90)
+}
+    })
+    console.log(newProdutsDescount)
+    
+    const nomes = ["Ana", "Carlos", "Maria", "João"];
+
+    const saudacoes = nomes.map(nome => {
+      return `Olá, ${nome}!`;  // Criando a saudação personalizada
+    });
+    
+    console.log(saudacoes);
+
+    const produtos = [
+        { nome: "Mouse", preco: 50 },
+        { nome: "Teclado", preco: 120 },
+        { nome: "Monitor", preco: 899.99 }
+    ];
+    
+    const produtCurrency = produtos.map(produt =>{
+
+        return {
+            nome: produt.nome,
+            preco: new Intl.NumberFormat("pt-BR",{
+                style:"currency",
+                currency:"BRL"}).format(produt.preco)
+         }})
+        
+    
+    console.log(produtCurrency);
+
+    const nomes = ["ana", "joão", "maria", "pedro", "lucas"];
+
+    const nomesMaiusculos = nomes.map(item =>{
+                return{ 
+                    nome: item.toUpperCase()}
+         })
+    console.log(nomesMaiusculos)
+
+const produtos = [
+    { nome: "Notebook", preco: 5000 },
+    { nome: "Smartphone", preco: 3000 },
+    { nome: "Tablet", preco: 1500 }
+];
+produtos.push({nome: "Neobook", preco: 1000})
+
+const produtDescount = produtos.map(produt => {
+
+    return {
+
+        nome: produt.nome,
+        preco: new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(produt.preco * 0.90)
+    }
+   
+})
+console.log(produtDescount);
+
+const produtos = [
+    { nome: "Notebook", preco: 5000, estoque: 5, fabricacao: 2022, cor: "Prata", categoria: "Informática", desconto: 10 },
+    { nome: "Smartphone", preco: 3000, estoque: 30, fabricacao: 2023, cor: "Preto", categoria: "Celular", desconto: 15 },
+    { nome: "Tablet", preco: 1500, estoque: 60, fabricacao: 2021, cor: "Branco", categoria: "Informática", desconto: 5 }
+];
+
+
+const produtosModificados = produtos.map(produto => ({
+   
+    ...produto,
+   preco: new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+}).format(produto.preco * (1- produto.desconto/100)),
+statusEstoque:
+produto.estoque < 10 ? "Estoque Baixo" :
+produto.estoque <=50 ? "Estoque Medio" : "Estoque Alto",
+AnoGarantia: produto.fabricacao >= 2023? "Garantia Ativa" : "Garantia Expirada"
+
+}))
+console.log(produtosModificados)
+
+const usuario = [{
+    nome: "Carlos",
+    idade: 30,
+    cidade: "São Paulo",
+    profissão: "Designer"
+  }];
+
+  const changeUser = usuario.map(changes => ({
+    ...changes,
+    idade: changes.idade + 1,
+    profissão: "Desenvolvedor"
+  }))
+  console.log(changeUser)*/
+
+  const usuarios = [
+    { nome: "Carlos", idade: 30 },
+    { nome: "Ana", idade: 25 },
+    { nome: "Pedro", idade: 40 }
+  ];
+
+  const newAge = usuarios.map(plusAge => ({
+    ...plusAge,
+    idade: plusAge.idade + 1,
+  }))
+  console.log(newAge)
+
+  [
+    { nome: 'Carlos', idade: 31 },
+    { nome: 'Ana', idade: 26 },
+    { nome: 'Pedro', idade: 41 }
+  ]
