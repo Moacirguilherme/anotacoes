@@ -275,7 +275,7 @@ const usuario = [{
     idade: changes.idade + 1,
     profissão: "Desenvolvedor"
   }))
-  console.log(changeUser)*/
+  console.log(changeUser)
 
   const usuarios = [
     { nome: "Carlos", idade: 30 },
@@ -287,10 +287,36 @@ const usuario = [{
     ...plusAge,
     idade: plusAge.idade + 1,
   }))
-  console.log(newAge)
+  console.log(newAge)*/
 
-  [
-    { nome: 'Carlos', idade: 31 },
-    { nome: 'Ana', idade: 26 },
-    { nome: 'Pedro', idade: 41 }
-  ]
+const formatarPreco = valor => new Intl.NumberFormat("pt-BR", { //funcao formatar preco sera chamanda em outras alteracoes de array
+    style: "currency",
+    currency: "BRL"
+}).format(valor)
+
+const produtosVestuario = [
+    { nome: "Camiseta", preco: 30, quantidade: 100 },
+    { nome: "Calça", preco: 60, quantidade: 80 },
+    { nome: "Tênis", preco: 120, quantidade: 50 }
+]
+const estoqueAtualizadoVestuario = produtosVestuario.map(estoqueVestuario => ({
+    ...estoqueVestuario,
+    preco: formatarPreco(estoqueVestuario.preco), // funcao formatarPreco chamada
+    quantidade: estoqueVestuario.quantidade + 5
+}))
+
+const produtosEletro = [
+    { nome: "Teclado", preco: 150, quantidade: 10 },
+    { nome: "Mouse", preco: 100, quantidade: 5 },
+    { nome: "Monitor", preco: 1200, quantidade: 2 }
+];
+
+const estoqueAtualizadoEletro = produtosEletro.map(estoqueEletro => ({
+    ...estoqueEletro,
+    preco: formatarPreco(estoqueEletro.preco), // funcao formatarPreco chamada.
+    quantidade: estoqueEletro.quantidade + 7
+
+}))
+
+console.log(estoqueAtualizadoVestuario)
+console.log(estoqueAtualizadoEletro)
